@@ -1,0 +1,6 @@
+@AspireAstro.WebApi_HostAddress = http://localhost:5237
+
+GET {{AspireAstro.WebApi_HostAddress}}/api/visitor/0
+Accept: application/json
+
+###

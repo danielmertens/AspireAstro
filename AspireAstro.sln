@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireAstro.WebApi", "AspireAstro.WebApi\AspireAstro.WebApi.csproj", "{6943F3EF-7732-44FE-B543-85A93E7F12F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireAstro.AppHost", "AspireAstro.AppHost\AspireAstro.AppHost.csproj", "{B7CB0122-F779-491A-A988-4953BFCAFDFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireAstro.ServiceDefaults", "AspireAstro.ServiceDefaults\AspireAstro.ServiceDefaults.csproj", "{75EBDD4E-8168-4BC5-B5A3-86FBC0C437A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6943F3EF-7732-44FE-B543-85A93E7F12F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6943F3EF-7732-44FE-B543-85A93E7F12F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6943F3EF-7732-44FE-B543-85A93E7F12F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6943F3EF-7732-44FE-B543-85A93E7F12F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CB0122-F779-491A-A988-4953BFCAFDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CB0122-F779-491A-A988-4953BFCAFDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CB0122-F779-491A-A988-4953BFCAFDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CB0122-F779-491A-A988-4953BFCAFDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EBDD4E-8168-4BC5-B5A3-86FBC0C437A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EBDD4E-8168-4BC5-B5A3-86FBC0C437A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EBDD4E-8168-4BC5-B5A3-86FBC0C437A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EBDD4E-8168-4BC5-B5A3-86FBC0C437A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
