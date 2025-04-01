@@ -5,9 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-builder.Services.AddOpenApi();
-builder.AddNpgsqlDbContext<AstroDbContext>(connectionName: "database");
-
+builder.AddSqlServerDbContext<AstroDbContext>(connectionName: "database");
 builder.Services.AddCors();
 
 var app = builder.Build();
@@ -16,12 +14,6 @@ app.ApplyMigrations();
 app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 app.MapDefaultEndpoints();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
 
 app.UseHttpsRedirection();
 
