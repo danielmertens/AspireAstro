@@ -9,7 +9,7 @@ builder.AddSqlServerDbContext<AstroDbContext>(connectionName: "database");
 builder.Services.AddCors();
 
 var app = builder.Build();
-app.ApplyMigrations();
+await app.ApplyMigrations();
 
 app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
