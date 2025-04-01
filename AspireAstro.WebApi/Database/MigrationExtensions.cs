@@ -16,12 +16,24 @@ public static class MigrationExtensions
             {
                 using var scope = app.Services.CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<AstroDbContext>();
-                await dbContext.Database.EnsureCreatedAsync();
-                await dbContext.Database.MigrateAsync();
+                var pendingMigrations = await dbContext.Database.GetPendingMigrationsAsync();
+                if (pendingMigrations.Any())
+                {
+                    Console.WriteLine("Applying pending migrations...");
+                    await dbContext.Database.MigrateAsync();
+                    Console.WriteLine("Migrations applied successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("No pending migrations found.");
+                }
                 return;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+
                 if (attempt == MAX_RETRIES)
                 {
                     throw;
